@@ -30,7 +30,7 @@ const paginado = (pageNumber) =>{
     setCurrentPage(pageNumber)
 }
 setTimeout(()=>{
-    setIsLoading(true);
+   
     setIsLoading(false);
 },3000);
 
@@ -80,6 +80,7 @@ const noRepeat = activity.map((e) =>e.name).reduce((acc,activityNoRepeat) =>{
         acc.push(activityNoRepeat)
     } return acc
 },[]) 
+
 if(isloading){
     return(
         <div>

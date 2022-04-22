@@ -92,7 +92,7 @@ return(
      <div>
           <Searchbar />
           <h1 className="link">   W O R L D W I D E C O U N T R I E S S E A R C H E R</h1>
-         <button className="boton"> <NavLink to="/activity"> See activities </NavLink></button>
+         
         
          <div>
         

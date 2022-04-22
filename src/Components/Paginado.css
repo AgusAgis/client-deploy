@@ -1,0 +1,27 @@
+.pagination {
+    font-size: 15px;
+    list-style: none;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+  }
+  .pageLink {
+    text-decoration: none;
+    box-shadow: 0 0 0.5rem var(--rich-black);
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    transition: all 0.2s;
+  }
+  .pageLink:hover {
+    color: var(--independence);
+    background-color: var(--white);
+    box-shadow: 0 0 2rem var(--rich-black);
+    transform: scale(1.1);
+  }

@@ -1,0 +1,20 @@
+.container{
+    border-radius: 04%;
+    border: solid 1px gray;
+    background: #D7CCC8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom:2rem;
+    width: 30vh;
+    min-height: 35vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: inline-block; 
+    text-decoration: none;
+  
+}
+.center{
+    list-style: none;       
+ 
+}

@@ -1,0 +1,26 @@
+.info{
+    
+   display: grid;
+   text-decoration: none;
+   color:#212121;
+}
+.flag{
+    margin-left: 75px;
+   
+    
+    text-align: center;
+}
+.text1{
+    margin-left: 75px;
+    text-decoration: none;
+    color:#212121;
+    font-size: 20px;
+   
+}
+.text2{
+    margin-left: 75px;
+    text-decoration: none;
+    color: #212121;
+    font-size: 20px;
+    
+}

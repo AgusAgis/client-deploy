@@ -1,0 +1,22 @@
+.containers{
+    border-radius: 04%;
+    border: solid 1px gray;
+    background: #D7CCC8;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    margin-bottom:2rem;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block; 
+    text-decoration: none;
+    margin-right: 80px;
+  
+}
+.center{
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    
+}

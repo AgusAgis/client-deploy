@@ -1,0 +1,22 @@
+ .containera{
+        border-radius: 04%;
+        border: solid 1px gray;
+        background: #D7CCC8;
+        padding-top: 2rem;
+        margin-bottom:2rem;
+        width: 300px;
+        height: 240px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        display: inline-block; 
+        text-decoration: none;
+      
+}
+.link{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: white;   
+}
+

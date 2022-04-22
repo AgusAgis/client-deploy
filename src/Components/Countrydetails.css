@@ -1,0 +1,21 @@
+.details{
+    border-radius: 04%;
+    border: solid 1px gray;
+    background: #D7CCC8;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom:2rem;
+    width: 40vh;
+    min-height: 35vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: inline-block; 
+    text-decoration: none;
+  
+}
+.btn{
+    margin-top: 1rem;
+}
+

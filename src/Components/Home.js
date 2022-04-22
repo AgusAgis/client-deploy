@@ -9,8 +9,7 @@ import Cards from "./Cards";
 import Paginado from "./Paginado";
 import Searchbar from "./Searchbar";
 import { getAllActivities, filterByActivity } from "../Redux/Actions/ActivitiesActions";
-
-
+import { Spinner } from "./Spinner";
 export default function Home (){
     const dispatch = useDispatch()
     const activity = useSelector((state)=> state.activities)
@@ -18,6 +17,9 @@ export default function Home (){
     const [currentPage, setCurrentPage] = useState(1)
     const [countriesPerPage,setCountriesPerPage] = useState(10)
     const[orden,setOrden]= useState("")
+
+const[isloading,setIsLoading]= useState(true);
+
     const indexOfLastCountry = currentPage * countriesPerPage
     const indexOfFirstCountry= indexOfLastCountry-countriesPerPage
     const currentCountries = allCountries.slice(indexOfFirstCountry,indexOfLastCountry)
@@ -25,15 +27,25 @@ export default function Home (){
 const paginado = (pageNumber) =>{
     setCurrentPage(pageNumber)
 }
+setTimeout(()=>{
+    setIsLoading(true);
+    setIsLoading(false);
+},3000);
+
+useEffect(()=>{
+    dispatch(getCountries());
+},[])
+
 useEffect(()=>{
     dispatch(getAllActivities());
 },[dispatch])
 
-    useEffect(()=>{
+    
+
+function handleClick(e){
+    e.preventDefault();
     dispatch(getCountries());
-},[])
-
-
+}
 
 function handleSort(e){
     e.preventDefault();
@@ -66,13 +78,23 @@ const noRepeat = activity.map((e) =>e.name).reduce((acc,activityNoRepeat) =>{
         acc.push(activityNoRepeat)
     } return acc
 },[]) 
-console.log(noRepeat)
+if(isloading){
+    return(
+        <div>
+            <Spinner />
+        </div>
+    )
+}
 
 return(
      <div>
-          <Searchbar />    
-     <h1 className="link">   W O R L D W I D E C O U N T R I E S S E A R C H E R</h1>
-     
+         <button className="boton"> <NavLink to="/activity"> See activities </NavLink></button>
+    
+     <h1>   WORLD WIDE COUNTRIES SEARCHER</h1>
+     <button onClick={e=> {handleClick(e)}}>
+         See all the countries
+         </button>
+         <Searchbar />
          <div>
         
              <select onChange={ e => handleSort(e)}>
@@ -117,11 +139,11 @@ return(
              {currentCountries?.map((c) =>{
                  
                  return(
-                    <div className = "containera">                 
+                    <div className = "container">
                     <Link  to={"/home/" + c.id}>
-                    <Cards  name={c.name} flags={c.flags} continents={c.continents} />
+                    <Cards name={c.name} flags={c.flags} continents={c.continents} />
                     </Link>
-                    </div>                
+                    </div>
                  )
 
                  })
@@ -129,7 +151,6 @@ return(
              
          </div>
      </div>
-     
  )
 };
 

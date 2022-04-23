@@ -3,7 +3,7 @@ export function Spinner(){
     return(
         <div>
         <img className="img" alt=""
-        src= "https://media2.giphy.com/media/3ov9jYkVbdGMo6UcG4/giphy.gif"
+        src= "https://i.pinimg.com/originals/0d/c9/68/0dc968448592a7d533096b74c263cc40.gif"
         
         ></img>
         </div>
